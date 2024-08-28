@@ -1,0 +1,95 @@
+{
+  "layer": "top",
+  "height": 48,
+  "position": "top",
+  "modules-left": [
+    "hyprland/workspaces",
+    "custom/player"
+  ],
+  "modules-center": [
+    "clock"
+  ],
+  "modules-right": [
+    "bluetooth",
+    "network", 
+    "custom/updates",
+    "pulseaudio",
+    "backlight",
+    "battery",
+    "custom/power"
+  ],
+  "custom/launcher":{
+    "format": " ",
+    "tooltip": false,
+    "on-click": "rofi -show drun",
+    "on-click-right": "killall rofi"
+  },
+  "hyprland/workspaces": {
+    "format": ""
+  },
+  "custom/player": {
+    "format": "󰐊  {}",
+    "exec": "$HOME/scripts/player.sh",
+    "on-click": "playerctl play-pause",
+    "max-length": 30
+  },
+  "clock": {
+    "format": "{:%H:%M}",
+    "tooltip-format": "{}"
+  },
+  "bluetooth": {
+    "format-on": "<span foreground=\"#98d3ee\"></span>",
+    "format-off": "<span foreground=\"#98d3ee\">󰂲</span>",
+    "format-disabled": "<span foreground=\"#98d3ee\">󰂲</span>",
+    "format-connected": "<span foreground=\"#98d3ee\">󰂱</span>",
+    "on-click": "blueman-manager",
+    "tooltip-format-connected": "{device_alias}"
+  },
+  "network": {
+    "format-wifi": "<span foreground=\"#87eab8\">{icon}</span>",
+    "format-icons": [ "󰤟", "󰤢", "󰤥", "󰤨"],
+    "tooltip-format-wifi": "{essid}",
+    "on-click": "nm-connection-editor"
+  },
+  "custom/updates":{
+    "tooltip": false,
+    "format": "<span foreground=\"#f1d8a5\">󰮯</span>",
+    "on-click": "kitty -e yay -Syu && notify-send -a 'System' 'The system has been updated' "
+  },
+  "pulseaudio": {
+    "tooltip": false,
+    "format": "<span foreground=\"#98d3ee\">{icon}</span>   {volume}  |",
+    "format-muted": "<span foreground=\"#98d3ee\"></span>    |",
+    "on-click-right":"pactl set-sink-mute 0 toggle",
+    "on-click":"pavucontrol",
+    "format-icons": {
+      "headphone": "",
+      "default": ""
+    }
+  },
+  "backlight": {
+    "tooltip": false,
+    "format": "<span foreground=\"#f1d8a5\">󰃠</span>  {}  |",
+    "interval":1,
+    "on-scroll-up": "light -A 5",
+    "on-scroll-down": "light -U 5"
+  },
+  "battery": {
+    "states": {
+      "good": 80,
+      "warning": 30,
+      "critical": 20
+    },
+    "tooltip": false,
+    "format": "<span foreground=\"#c296eb\">{icon}</span>   {capacity}",
+    "format-charging": "<span foreground=\"#c296eb\"></span>   {capacity}",
+    "format-plugged":"<span foreground=\"#c296eb\"></span>   {capacity}",
+    "format-alt": "<span foreground=\"#c296eb\">{icon}</span>   {time}",
+    "format-icons": ["", "", "", "", ""]
+  },
+  "custom/power":{
+    "tooltip": false,
+    "format": "",
+    "on-click": "$HOME/scripts/leave.sh"
+  }
+}

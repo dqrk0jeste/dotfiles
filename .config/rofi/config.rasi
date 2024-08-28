@@ -1,0 +1,17 @@
+configuration {
+  modi: "drun";
+  hover-select: true;
+  icon-theme: "Tela-circle-dracula";
+  me-select-entry: "";
+  me-accept-entry: [ MousePrimary ];
+  scroll-method: 0;
+  show-icons: true;
+  terminal: "kitty";
+  drun-display-format: "{icon}  {name}";
+  location: 2;
+  disable-history: false;
+  hide-scrollbar: true;
+}
+
+@theme "decay"
+

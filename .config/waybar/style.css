@@ -1,0 +1,96 @@
+* {
+  font-family: "Poppins";
+  font-size: 17px;
+  min-height: 0;
+  min-width: 0;
+}
+
+window#waybar {
+  border-radius: 0;
+  background-color: #171b20;
+}
+
+#custom-launcher {
+  font-size: 24px;
+  margin-left: 16px;
+  color: #86aaec;
+}
+
+#workspaces {
+  padding: 10px 0;
+  margin-left: 12px;
+}
+
+#workspaces button {
+  padding: 0 13px;
+  background-color: #86aaec;
+  border-radius: 1000px;
+  margin-left: 4px;
+  transition: padding 0.3s ease-in-out;
+}
+
+#workspaces button.active {
+  background-color: #c296eb;
+  padding: 0 20px;
+}
+
+#custom-player {
+  margin-left: 16px;
+}
+
+#clock {
+  font-size: 32px;
+  color: #dee1e6;
+}
+
+#bluetooth {
+  margin-right: 8px;
+  color: #dee1e6;
+}
+
+#network {
+  margin-right: 13px;
+}
+
+#custom-updates {
+  margin-right: 32px;
+  color: #dee1e6;
+}
+
+#pulseaudio {
+  margin-right: 12px;
+  color: #dee1e6;
+}
+
+#backlight {
+  margin-right: 12px;
+  color: #dee1e6;
+}
+
+#battery {
+  margin-right: 24px;
+  color: #dee1e6;
+  background: transparent;
+}
+
+#battery.critical:not(.charging) {
+  color: #dee1e6;
+  animation-name: blink;
+  animation-duration: 0.5s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes blink {
+  to {
+    color: #e26c7c;
+  }
+}
+
+#custom-power {
+  font-size: 20px;
+  margin-right: 22px;
+  color: #e26c7c;
+  background: transparent;
+}

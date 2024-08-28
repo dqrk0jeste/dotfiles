@@ -1,0 +1,82 @@
+ * {
+  white: #dee1e6;
+  darker-black: #111519;
+  black: #171B20;
+  grey: #41454a;
+  blue: #86aaec;
+  font: "Poppins 16";
+}
+
+element-text, element-icon , mode-switcher {
+  background-color: inherit;
+  text-color:       inherit;
+}
+
+window {
+  width: 600px;
+  transparency: "real";
+  padding: 24px;
+  y-offset: 48px;
+  background-color: @black;
+  border: 2px;
+  border-color: @blue;
+  border-radius: 24px;
+}
+
+mainbox {
+  background-color: transparent;
+}
+
+inputbar {
+  children: [entry];
+  border: none;
+  background-color: transparent;
+}
+
+entry {
+  padding: 10px 20px;
+  text-color: @white;
+  background-color: transparent;
+  border: 0 0 2px 0;
+  border-color: @blue;
+}
+
+listview {
+  padding: 20px 0px 0px 0px;
+  columns: 1;
+  lines: 3;
+  background-color: transparent;
+}
+
+element {
+  padding: 20px;
+  border-radius: 24px;
+  background-color: transparent;
+  text-color: @white;
+}
+
+element-icon {
+  size: 36px;
+  background-color: transparent;
+}
+
+element-text {
+  vertical-align: 0.5;
+  background-color: transparent;
+}
+
+element selected {
+  background-color: @grey;
+}
+
+message {
+  background-color: white;
+  margin: 2px;
+  padding: 2px;
+}
+
+textbox {
+  padding: 6px;
+  margin: 20px 0px 0px 20px;
+  text-color: @grey;
+}

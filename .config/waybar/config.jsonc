@@ -1,13 +1,13 @@
 {
   "layer": "top",
-  "height": 48,
+  "height": 42,
+  "margin": "12, 12, 0, 12",
   "position": "top",
   "modules-left": [
-    "hyprland/workspaces",
-    "custom/player"
+    "hyprland/workspaces"
   ],
   "modules-center": [
-    "clock"
+    "hyprland/window"
   ],
   "modules-right": [
     "bluetooth",
@@ -16,6 +16,7 @@
     "pulseaudio",
     "backlight",
     "battery",
+    "clock",
     "custom/power"
   ],
   "custom/launcher":{
@@ -25,16 +26,17 @@
     "on-click-right": "killall rofi"
   },
   "hyprland/workspaces": {
-    "format": ""
+    "format": "{icon}",
+    "format-icons": {
+      "active": "",
+      "default": ""
+    }
   },
-  "custom/player": {
-    "format": "󰐊  {}",
-    "exec": "$HOME/scripts/player.sh",
-    "on-click": "playerctl play-pause",
-    "max-length": 30
+  "hyprland/window": {
+    "max-length": 100
   },
   "clock": {
-    "format": "{:%H:%M}",
+    "format": "{:%I:%M %p}",
     "tooltip-format": "{}"
   },
   "bluetooth": {
@@ -47,6 +49,7 @@
   },
   "network": {
     "format-wifi": "<span foreground=\"#87eab8\">{icon}</span>",
+    "format-disconnected": "󰤮",
     "format-icons": [ "󰤟", "󰤢", "󰤥", "󰤨"],
     "tooltip-format-wifi": "{essid}",
     "on-click": "nm-connection-editor"

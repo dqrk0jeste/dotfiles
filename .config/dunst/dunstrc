@@ -196,7 +196,7 @@
     # corners.
     # The radius will be automatically lowered if it exceeds half of the
     # notification height to avoid clipping text and/or icons.
-    corner_radius = 24
+    corner_radius = 12
 
     # Ignore the dbus closeNotification message.
     # Useful to enforce the timeout set by dunst configuration. Without this
@@ -389,15 +389,15 @@
 [urgency_low]
     background = "#171B20"
     foreground = "#dee1e6"
-    frame_color = "#86aaecdf"
+    frame_color = "#485263"
     new_icon = "$HOME/.config/dunst/icons/arch.png"
     timeout = 5
 
 [urgency_normal]
     background = "#171B20"
     foreground = "#dee1e6"
-    frame_color = "#86aaec"
-    new_icon = "$HOME/.config/dunst/icons/arch.png"
+    frame_color = "#485263"
+  new_icon = "$HOME/.config/dunst/icons/arch.png"
     timeout = 5
 
 [spotify]

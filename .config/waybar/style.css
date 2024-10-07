@@ -6,41 +6,32 @@
 }
 
 window#waybar {
-  border-radius: 0;
+  border-radius: 12;
+  border: 3px solid #485263;
   background-color: #171b20;
 }
 
-#custom-launcher {
-  font-size: 24px;
-  margin-left: 16px;
-  color: #86aaec;
-}
-
 #workspaces {
-  padding: 10px 0;
-  margin-left: 12px;
+  margin-left: 5px;
 }
 
 #workspaces button {
-  padding: 0 13px;
-  background-color: #86aaec;
-  border-radius: 1000px;
+  color: #86aaec;
   margin-left: 4px;
-  transition: padding 0.3s ease-in-out;
+  background-color: transparent;
+}
+
+#workspaces button.hover {
+ background-color: transparent;
 }
 
 #workspaces button.active {
-  background-color: #c296eb;
-  padding: 0 20px;
+ color: #c296eb;
+ background-color: transparent;
 }
 
 #custom-player {
   margin-left: 16px;
-}
-
-#clock {
-  font-size: 32px;
-  color: #dee1e6;
 }
 
 #bluetooth {
@@ -86,6 +77,11 @@ window#waybar {
   to {
     color: #e26c7c;
   }
+}
+
+#clock {
+  color: #dee1e6;
+  margin-right: 24px;
 }
 
 #custom-power {

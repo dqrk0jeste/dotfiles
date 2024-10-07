@@ -3,6 +3,7 @@
   darker-black: #111519;
   black: #171B20;
   grey: #41454a;
+  light-grey: #485263;
   blue: #86aaec;
   font: "Poppins 16";
 }
@@ -14,13 +15,12 @@ element-text, element-icon , mode-switcher {
 
 window {
   width: 600px;
-  transparency: "real";
   padding: 24px;
-  y-offset: 48px;
+  y-offset: 28px;
   background-color: @black;
-  border: 2px;
-  border-color: @blue;
-  border-radius: 24px;
+  border: 3px;
+  border-color: @light-grey;
+  border-radius: 12px;
 }
 
 mainbox {
@@ -28,35 +28,40 @@ mainbox {
 }
 
 inputbar {
-  children: [entry];
+  children: [prompt, entry];
   border: none;
-  background-color: transparent;
+  background-color: @grey;
+  border-radius: 12px;
 }
 
 entry {
-  padding: 10px 20px;
   text-color: @white;
   background-color: transparent;
-  border: 0 0 2px 0;
-  border-color: @blue;
+  padding: 8px 6px 6px 6px;
+}
+
+prompt {
+  background-color: transparent;
+  color: @blue;
+  padding: 12px 6px 6px 6px;
 }
 
 listview {
   padding: 20px 0px 0px 0px;
   columns: 1;
-  lines: 3;
+  lines: 4;
   background-color: transparent;
 }
 
 element {
-  padding: 20px;
-  border-radius: 24px;
+  padding: 10px;
+  border-radius: 12px;
   background-color: transparent;
   text-color: @white;
 }
 
 element-icon {
-  size: 36px;
+  size: 32px;
   background-color: transparent;
 }
 

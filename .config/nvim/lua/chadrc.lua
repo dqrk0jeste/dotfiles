@@ -1,16 +1,15 @@
 -- This file needs to have same structure as nvconfig.lua 
 -- https://github.com/NvChad/ui/blob/v2.5/lua/nvconfig.lua
 
----@type ChadrcConfig
+---@class M
 local M = {}
 
-M.ui = {
-	theme = "decay",
+M.base46 = {
+  theme = "decay",
+}
 
-	-- hl_override = {
-	-- 	Comment = { italic = true },
-	-- 	["@comment"] = { italic = true },
-	-- },
+M.nvdash = {
+  load_on_startup = true,
 }
 
 return M
